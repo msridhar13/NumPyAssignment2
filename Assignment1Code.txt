@@ -1,0 +1,14 @@
+#n means window and l means list of the elements
+import numpy as np
+def movingAvg(l,N):
+   # sum = 0
+    result=list(0 for x in range(0,len(l)-N+1))
+   
+    for i in range(0,len(l)-N+1):
+        sum = 0
+        k=l[i:N+i]
+        for j in range(0,len(k)):
+            sum=sum+k[j]
+        result[i]=sum/N
+        
+    return result
